@@ -7,7 +7,7 @@ def pca_scratch_high_dim(X,K,N):
     reduction.
     Function inputs N images each flattened to the dimension high_dim=10201 
     which gets reduced to dimension low_dim=K.
-    X - N*high_dim
+    X - N x high_dim
     K - low_dim
     N - no.of.samples
     
