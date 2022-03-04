@@ -1,5 +1,4 @@
 from src.import_file import *
-
 def FiscLDA(X_low,Y):
     happy_index=np.where(Y==1)[0]
     sad_index=np.where(Y==0)[0]
@@ -32,4 +31,5 @@ def FiscLDA(X_low,Y):
     plt.plot(Xhap1,'g')
     plt.plot(np.full(11,thresh),'b')
     plt.plot(Xsad1,'r')
+    plt.show()
     return 
