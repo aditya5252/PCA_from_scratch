@@ -27,9 +27,9 @@ def FiscLDA(X_low,Y):
     Xhap1=np.matmul(X_happ,W)
     Xsad1=np.matmul(X_sad,W)
     thresh=(np.mean(Xhap1)+np.mean(Xsad1))/2
-
+    thresh_axis=max(Xhap1.shape[0],Xsad1.shape[0])
     plt.plot(Xhap1,'g')
-    plt.plot(np.full(11,thresh),'b')
+    plt.plot(np.full(thresh_axis,thresh),'b')
     plt.plot(Xsad1,'r')
     plt.show()
     return 
