@@ -2,9 +2,9 @@
 import glob
 import matplotlib.pyplot as plt
 
-def get_data_():
-#     data = [(plt.imread(file),file) for file in glob.glob('../data/emotion_classification/train/*.gif')]
-    data = [(plt.imread(file),file) for file in glob.glob('data/emotion_classification/train/*.gif')]
+def get_data_(train=True):
+    state= 'train' if train==True else 'test'
+    data = [(plt.imread(file),file) for file in glob.glob('data/emotion_classification/'+state+'/*.gif')]
     img_list=[]
     img_targets=[]
     for dat in data :
